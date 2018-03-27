@@ -14,15 +14,18 @@ $(document).ready(function(){
       var info = $(this).val();
       userResponses.push(info);
     });
-
+    //vthese lines work to select inputs from the userv
     for (var i = 0; i <= userResponses.length; i++ ) {
-      if (userResponses[i] === "sleep") {
+    //^these lines work to select inputs from the user^
+    //veverything else is bad code cause i cant figure out logic right now"v
+      if (userResponses[i] === "sleep" || userResponses[i] === "overwhelmed" || userResponses[i] === "headaches"){
         $("#response1").show();
+      } else if (userResponses[i] === "blood"){
+        $("#response2").show();
+      }
 
-    console.log(userResponses);
-  }
-
-}
+    };
+console.log(userResponses);
 
   });
 });
