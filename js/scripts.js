@@ -1,7 +1,9 @@
 $(document).ready(function(){
   $("form#stress_survey").submit(function(event){
     var userResponses = [];
+    var answers = ["sleep", "overwhelmed", "headaches" ,"blood", "anxiety", "asthma", "meditate", "breath", "pet"]
     event.preventDefault();
+    debugger;
     $("input:checkbox[name=stress]:checked").each(function(){
       var info = $(this).val();
       userResponses.push(info);
@@ -18,11 +20,12 @@ $(document).ready(function(){
     for (var i = 0; i <= userResponses.length; i++ ) {
     //^these lines work to select inputs from the user^
     //veverything else is bad code cause i cant figure out logic right now"v
-      if (userResponses[i] === "sleep" || userResponses[i] === "overwhelmed" || userResponses[i] === "headaches"){
-        $("#response1").show();
-      } else if (userResponses[i] === "blood"){
-        $("#response2").show();
-      }
+      // if (userResponses[i] === "sleep" || userResponses[i] === "overwhelmed" || userResponses[i] === "headaches"){
+      //   $("#response1").show();
+      // } else if (userResponses[i] === "blood"){
+      //   $("#response2").show();
+      // }
+      if (userResponses[i].includes)
 
     };
 console.log(userResponses);
